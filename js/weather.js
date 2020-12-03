@@ -12,9 +12,12 @@ function gettingJSON(){
     console.log("Location is: " + location);
 
     //set default temperature format if one isn't provided
-    let format = document.querySelector("#fahrenheit").value;
-    if (document.querySelector("#celcius:checked")){
-        format = document.querySelector("#celcius: checked").value;
+    let format;
+    if (document.querySelectorAll("input[name=temp]:checked").length!=0){
+        format = 'metric';
+    }
+    else{
+        format = 'imperial';
     }
     // Your code here.
     console.log("Format is:" + format);
