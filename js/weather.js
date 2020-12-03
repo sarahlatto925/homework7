@@ -14,7 +14,7 @@ function gettingJSON(){
     //set default temperature format if one isn't provided
     let format;
     if (document.querySelectorAll("input[name=temp]:checked").length!=0){
-        format = 'metric';
+        format = document.querySelectorAll("input[name=temp]:checked")[0].value;
     }
     else{
         format = 'imperial';
@@ -45,7 +45,7 @@ function gettingJSON(){
         temp.innerHTML = (json['main'].temp) + " with " + (json['weather'][0].description)
         loc.innerHTML = (json['name'])
         console.log(JSON.stringify(json));
-        tempImg.src = "http://opeanweathermap.org/img/wn/" + (json['weather'][0].icon) + ".png";
+        tempImg.src = "http://openweathermap.org/img/wn/" + (json['weather'][0].icon) + ".png";
         tempImg.alt = (json['weather'][0].description);
         console.log("Icon is " + json['weather'][0].icon);
     });
