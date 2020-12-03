@@ -20,7 +20,7 @@ function gettingJSON(){
     console.log("Format is:" + format);
 
     //set the query  
-    let query = "https://api.openweathermap.org/data/2.5/weather?q=" + location + "&units=" + format + "&appid=&4b35f3e25e9cb1d96498dc927fc964a2";
+    let query = "https://api.openweathermap.org/data/2.5/weather?q=" + location + "&units=" + format + "&appid=4b35f3e25e9cb1d96498dc927fc964a2";
     // Your code here.  
     
     console.log("Query is:" + query);
