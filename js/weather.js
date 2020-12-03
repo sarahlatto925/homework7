@@ -44,9 +44,8 @@ function gettingJSON(){
         // Your code here.
         temp.innerHTML = (json['main'].temp) + " with " + (json['weather'][0].description);
         loc.innerHTML = (json['name']);
-        console.log(JSON.stringify(json));
-        tempImg.src = "http://openweathermap.org/img/wn/" + ((json['weather'][0].icon) + ".png");
         tempImg.alt = (json['weather'][0].description);
+        tempImg.src = "http://openweathermap.org/img/wn/" + ((json['weather'][0].icon) + ".png");
         console.log("Icon is " + json['weather'][0].icon);
     });
 }
